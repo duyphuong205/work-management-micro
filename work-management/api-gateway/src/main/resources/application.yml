@@ -5,6 +5,15 @@ spring:
   application:
     name: api-gateway
 
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: user-service
+            uri: ${BASE_URL_USER_SVC}
+            predicates:
+              - Path=/api/*
+
 eureka:
   client:
     register-with-eureka: true
