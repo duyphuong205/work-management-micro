@@ -1,0 +1,13 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: api-gateway
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_DEFAULT_ZONE}

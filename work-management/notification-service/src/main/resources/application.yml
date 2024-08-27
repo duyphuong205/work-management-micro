@@ -1,0 +1,13 @@
+server:
+  port: 4444
+
+spring:
+  application:
+    name: notification-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_DEFAULT_ZONE}
