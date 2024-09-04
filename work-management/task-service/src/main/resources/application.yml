@@ -4,6 +4,16 @@ server:
 spring:
   application:
     name: task-service
+  datasource:
+    url: ${DATASOURCE_URL_TASK_SVC}
+    username: ${DATASOURCE_USERNAME_TASK_SVC}
+    password: ${DATASOURCE_PASSWORD_TASK_SVC}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 eureka:
   client:

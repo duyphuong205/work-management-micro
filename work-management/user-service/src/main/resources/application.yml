@@ -4,6 +4,16 @@ server:
 spring:
   application:
     name: user-service
+  datasource:
+    url: ${DATASOURCE_URL_USER_SVC}
+    username: ${DATASOURCE_USERNAME_USER_SVC}
+    password: ${DATASOURCE_PASSWORD_USER_SVC}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 eureka:
   client:
